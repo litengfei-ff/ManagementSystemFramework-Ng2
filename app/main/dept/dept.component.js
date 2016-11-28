@@ -178,7 +178,7 @@ var DeptComponent = (function () {
             moduleId: module.id,
             selector: 'dept-component',
             templateUrl: "dept.component.html",
-            styleUrls: ["dept.component.css"],
+            styleUrls: ["../main.component.css", "dept.component.css"],
             animations: [
                 core_1.trigger('routeAnimation', [
                     core_1.state('*', core_1.style({

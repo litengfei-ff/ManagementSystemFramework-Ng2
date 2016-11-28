@@ -9,7 +9,7 @@ import { DeptService } from '../../services/dept.service'
     moduleId: module.id,
     selector: 'dept-component',
     templateUrl: "dept.component.html",
-    styleUrls: ["dept.component.css"],
+    styleUrls: ["../main.component.css", "dept.component.css"],
     animations: [
         trigger('routeAnimation', [
             state('*',

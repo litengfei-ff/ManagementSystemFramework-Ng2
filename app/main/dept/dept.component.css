@@ -1,25 +1,4 @@
-.deptTitle{
-    color:#0e90d2
-}
 
-.divider{
-    margin: 10px 0 0 0;
-}
-.deptBtnGroup{
-    color:#3f51b5;
-    font-size: xx-small;
-}
-.deptContent{
-    font-size: small;   
-}
-.deptContent span{
-    margin-top: 15px;
-    display: block;
-}
-.deptContent ul{
-    list-style: none;
-    
-}
 .deptFirstUl{
     padding-left: 0;
 } 

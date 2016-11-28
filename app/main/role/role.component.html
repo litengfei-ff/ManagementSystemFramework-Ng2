@@ -1,0 +1,37 @@
+<div>
+    <div class="contentTitle">
+        <strong>
+            角色管理 
+        </strong>
+    </div>
+    <md-divider class="contentDivider">
+    </md-divider>
+
+    <div class="contentBtnGroup">
+
+        <md-button-toggle-group>
+            <button md-button (click)="refresh(true)">
+                <md-icon>autorenew</md-icon>
+                刷新
+            </button>
+            <button md-button (click)="openAddDialog()">
+                <md-icon>add_circle_outline</md-icon>
+                添加
+            </button>
+            <button md-button (click)="openEditDialog()">
+                <md-icon>wrap_text</md-icon>
+                编辑
+            </button>
+            <button md-button (click)="openDeleteDialog()">
+                <md-icon>remove_circle_outline</md-icon>
+                删除
+            </button>
+        </md-button-toggle-group>
+    </div>
+
+    <div class="content">
+        <span>角色列表</span>
+
+
+    </div>
+</div>

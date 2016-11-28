@@ -7,3 +7,23 @@
     height:calc(100% - 105px);
     overflow: auto
 }
+
+.contentTitle{
+    color:#0e90d2
+}
+
+.contentDivider{
+    margin: 10px 0 0 0;
+}
+.contentBtnGroup{
+    color:#3f51b5;
+    font-size: xx-small;
+}
+.content{
+    font-size: small;   
+}
+.content span{
+    margin-top: 15px;
+    display: block;
+}
+ 

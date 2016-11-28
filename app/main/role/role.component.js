@@ -16,7 +16,8 @@ var RoleComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'role-component',
-            template: "\n        role\n        "
+            templateUrl: "role.component.html",
+            styleUrls: ["../main.component.css", "role.component.css"]
         }), 
         __metadata('design:paramtypes', [])
     ], RoleComponent);

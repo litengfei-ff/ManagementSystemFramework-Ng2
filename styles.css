@@ -25,4 +25,8 @@ body {
 .fl{
   float: left;
 }
- 
+
+ul{
+    list-style: none;
+    
+}
