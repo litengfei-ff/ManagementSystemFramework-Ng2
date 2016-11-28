@@ -1,0 +1,8 @@
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.userInfo{
+   font-size: small;
+   margin-right: 10px;
+}

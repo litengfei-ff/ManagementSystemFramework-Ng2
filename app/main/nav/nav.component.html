@@ -1,0 +1,29 @@
+<div class="navBox">
+    <md-nav-list>
+        <a md-list-item [routerLink]="['/main/index']" routerLinkActive="activeNav"> 主页 </a>
+
+        <md-list-item (click)="toogleSysNav()">
+            <a md-line>系统管理</a>
+            <i class="material-icons">{{toogleIcon}}</i>
+        </md-list-item>
+
+        <md-list dense *ngIf="showSysNav">
+            <a md-list-item [routerLink]="['/main/dept']" routerLinkActive="activeNav"> 部门管理 </a>
+            <a md-list-item [routerLink]="['/main/role']" routerLinkActive="activeNav"> 角色管理 </a>
+            <a md-list-item [routerLink]="['/main/user']" routerLinkActive="activeNav"> 用户管理 </a>
+            <a md-list-item [routerLink]="['/main/log']" routerLinkActive="activeNav"> 日志管理 </a>
+
+        </md-list>
+
+        <md-list-item>
+            <a md-line>业务管理</a>
+            <i class="material-icons">remove</i>
+        </md-list-item>
+
+        <md-list dense>
+            <a md-list-item [routerLink]="['/main/yy']" routerLinkActive="activeNav"> 切克 </a>
+        </md-list>
+
+    </md-nav-list>
+
+</div>

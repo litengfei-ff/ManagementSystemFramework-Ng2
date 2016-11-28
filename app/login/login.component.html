@@ -1,0 +1,18 @@
+<div class="login-content">
+    <p class="title">{{appName}}</p>
+    <!-- Login -->
+    <div class="login-block">
+        <p>
+            <md-icon>person</md-icon>
+            <md-input style="width:90%" placeholder="请输入用户名" [(ngModel)]="loginData.JobNumber"></md-input>
+        </p>
+        <p>
+            <md-icon>security</md-icon>
+            <md-input style="width:90%" type="password" placeholder="请输入密码" [(ngModel)]="loginData.Pwd"></md-input>
+        </p>
+
+        <button md-fab class="loginBtn" (click)="login()" disabled={{isDoing}}>
+            <md-icon class="md-24">arrow_forward</md-icon>
+        </button>
+    </div>
+</div>

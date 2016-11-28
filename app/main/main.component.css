@@ -1,0 +1,9 @@
+.leftNav{
+    float:left
+}
+.rightContent{
+    float:left; background:#f4f4f4;padding:20px;
+    width:calc(100% - 309px);
+    height:calc(100% - 105px);
+    overflow: auto
+}

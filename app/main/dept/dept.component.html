@@ -1,0 +1,67 @@
+<div>
+    <div class="deptTitle">
+        <strong>
+            部门管理 
+        </strong>
+    </div>
+    <md-divider class="divider">
+    </md-divider>
+
+    <div class="deptBtnGroup">
+
+        <md-button-toggle-group>
+            <button md-button (click)="refresh(true)">
+                <md-icon>autorenew</md-icon>
+                刷新
+            </button>
+            <button md-button (click)="openAddDialog()">
+                <md-icon>add_circle_outline</md-icon>
+                添加
+            </button>
+            <button md-button (click)="openEditDialog()">
+                <md-icon>wrap_text</md-icon>
+                编辑
+            </button>
+            <button md-button (click)="openDeleteDialog()">
+                <md-icon>remove_circle_outline</md-icon>
+                删除
+            </button>
+        </md-button-toggle-group>
+    </div>
+
+    <div class="deptContent">
+        <span>部门列表(最多四级目录)</span>
+        <ul class="deptFirstUl">
+            <li *ngFor="let dept of deptList">
+                <md-checkbox (change)="checkChange(dept.Id,$event.checked)" [checked]="checkedItem==dept.Id">
+                    {{dept.DepartmentName}}
+                </md-checkbox>
+
+                <ul>
+                    <li *ngFor="let dep of dept.Child">
+                        <md-checkbox (change)="checkChange(dep.Id,$event.checked)" [checked]="checkedItem==dep.Id">
+                            {{dep.DepartmentName}}
+                        </md-checkbox>
+
+                        <ul>
+                            <li *ngFor="let de of dep.Child">
+                                <md-checkbox (change)="checkChange(de.Id,$event.checked)" [checked]="checkedItem==de.Id">
+                                    {{de.DepartmentName}}
+                                </md-checkbox>
+
+                                <ul>
+                                    <li *ngFor="let d of de.Child">
+                                        <md-checkbox (change)="checkChange(d.Id,$event.checked)" [checked]="checkedItem==d.Id">
+                                            {{d.DepartmentName}}
+                                        </md-checkbox>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</div>

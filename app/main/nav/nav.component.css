@@ -1,0 +1,10 @@
+.navBox{
+    width:268px; height:calc(100% - 65px);overflow:auto;border-right: 1px solid #ddd;
+}
+ 
+.activeNav{
+    color: #0e90d2;
+    background: red;
+} 
+
+ 
