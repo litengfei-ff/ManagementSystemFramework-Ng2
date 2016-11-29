@@ -20,6 +20,7 @@ import { SingleLineDialog } from '../dialog/singleline.dialog';
 import { ConfirmDialog } from '../dialog/confirm.dialog';
 
 import { LocalDataService } from '../services/localData.service';
+import { HttpService } from '../services/http.service';
 import { UserService } from '../services/user.service';
 import { DeptService } from '../services/dept.service';
 
@@ -29,7 +30,7 @@ import { DeptService } from '../services/dept.service';
         CommonModule,
         FormsModule,
         MainRoutingModule,
-        MaterialModule.forRoot(),
+        MaterialModule.forRoot()
     ],
     declarations: [
         MainComponent,
@@ -40,11 +41,11 @@ import { DeptService } from '../services/dept.service';
         UserComponent,
         RoleComponent,
         LogComponent,
-        SingleLineDialog,ConfirmDialog
+        SingleLineDialog, ConfirmDialog
     ],
     entryComponents: [
         SingleLineDialog, ConfirmDialog
     ],
-    providers: [MdSnackBar, LocalDataService, UserService, DeptService],
+    providers: [MdSnackBar, LocalDataService, HttpService, UserService, DeptService],
 })
 export class MainModule { }

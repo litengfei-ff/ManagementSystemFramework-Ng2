@@ -30,8 +30,6 @@ var HeaderComponent = (function () {
                 _this.userName = p.data.name;
                 _this.userDeptName = p.data.deptName;
             }
-        }).catch(function (e) {
-            _this.snackBar.open(e, 'ok');
         });
     };
     HeaderComponent.prototype.logOut = function () {

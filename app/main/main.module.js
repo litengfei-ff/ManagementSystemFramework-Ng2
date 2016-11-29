@@ -25,6 +25,7 @@ var log_component_1 = require('./log/log.component');
 var singleline_dialog_1 = require('../dialog/singleline.dialog');
 var confirm_dialog_1 = require('../dialog/confirm.dialog');
 var localData_service_1 = require('../services/localData.service');
+var http_service_1 = require('../services/http.service');
 var user_service_1 = require('../services/user.service');
 var dept_service_1 = require('../services/dept.service');
 var MainModule = (function () {
@@ -36,7 +37,7 @@ var MainModule = (function () {
                 common_1.CommonModule,
                 forms_1.FormsModule,
                 main_routing_module_1.MainRoutingModule,
-                material_1.MaterialModule.forRoot(),
+                material_1.MaterialModule.forRoot()
             ],
             declarations: [
                 main_component_1.MainComponent,
@@ -52,7 +53,7 @@ var MainModule = (function () {
             entryComponents: [
                 singleline_dialog_1.SingleLineDialog, confirm_dialog_1.ConfirmDialog
             ],
-            providers: [material_2.MdSnackBar, localData_service_1.LocalDataService, user_service_1.UserService, dept_service_1.DeptService],
+            providers: [material_2.MdSnackBar, localData_service_1.LocalDataService, http_service_1.HttpService, user_service_1.UserService, dept_service_1.DeptService],
         }), 
         __metadata('design:paramtypes', [])
     ], MainModule);

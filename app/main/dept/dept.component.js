@@ -65,8 +65,6 @@ var DeptComponent = (function () {
                     _this.snackBar.open('获取部门信息成功!', 'ok');
                 }
             }
-        }).catch(function (e) {
-            _this.snackBar.open('获取部门信息失败!', 'ok');
         });
     };
     //a 添加新部门
@@ -80,8 +78,6 @@ var DeptComponent = (function () {
             else {
                 _this.snackBar.open(p.msg || '添加失败', 'ok');
             }
-        }).catch(function (e) {
-            _this.snackBar.open(e, 'ok');
         });
     };
     // 编辑
@@ -95,8 +91,6 @@ var DeptComponent = (function () {
             else {
                 _this.snackBar.open(p.msg || '修改失败', 'ok');
             }
-        }).catch(function (e) {
-            _this.snackBar.open(e, 'ok');
         });
     };
     // 删除
@@ -110,8 +104,6 @@ var DeptComponent = (function () {
             else {
                 _this.snackBar.open(p.msg || '删除失败', 'ok');
             }
-        }).catch(function (e) {
-            _this.snackBar.open(e, 'ok');
         });
     };
     DeptComponent.prototype.openAddDialog = function () {

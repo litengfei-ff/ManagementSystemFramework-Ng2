@@ -34,9 +34,7 @@ export class HeaderComponent {
                     this.userDeptName = p.data.deptName;
                 }
             }
-        ).catch(e => {
-            this.snackBar.open(e, 'ok');
-        });
+        );
     }
 
     logOut(): void {

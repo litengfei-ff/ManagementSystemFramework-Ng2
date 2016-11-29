@@ -9,32 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-require('rxjs/add/operator/toPromise');
-var localData_service_1 = require('../services/localData.service');
+var http_service_1 = require('../services/http.service');
 var const_1 = require('./const');
 var UserService = (function () {
-    function UserService(http, localDataService) {
-        this.http = http;
-        this.localDataService = localDataService;
+    function UserService(httpService) {
+        this.httpService = httpService;
         this.loginUrl = const_1.BaseUrl + '/api/user/getDetail';
-        this.headers = new http_1.Headers({
-            'Content-Type': 'application/json',
-            "Authorization": "bearer " + JSON.parse(this.localDataService.getItem(const_1.TokenName)).accessToken
-        });
     }
-    UserService.prototype.handleError = function (error) {
-        console.error('An error occurred', error);
-    };
     UserService.prototype.getDetail = function () {
-        return this.http.get(this.loginUrl, { headers: this.headers })
-            .toPromise()
-            .then(function (response) { return response.json(); })
-            .catch(this.handleError);
+        return this.httpService.get(this.loginUrl)
+            .then(function (response) { return response; });
     };
     UserService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http, localData_service_1.LocalDataService])
+        __metadata('design:paramtypes', [http_service_1.HttpService])
     ], UserService);
     return UserService;
 }());

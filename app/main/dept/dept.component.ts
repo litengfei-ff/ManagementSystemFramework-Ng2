@@ -68,9 +68,7 @@ export class DeptComponent implements OnInit {
                     this.snackBar.open('获取部门信息成功!', 'ok');
                 }
             }
-        }).catch(e => {
-            this.snackBar.open('获取部门信息失败!', 'ok');
-        })
+        });
     }
 
     //a 添加新部门
@@ -83,10 +81,7 @@ export class DeptComponent implements OnInit {
             else {
                 this.snackBar.open(p.msg || '添加失败', 'ok');
             }
-        }).catch(
-            e => {
-                this.snackBar.open(e, 'ok');
-            });
+        });
     }
     // 编辑
     edit(newName: string): void {
@@ -98,10 +93,7 @@ export class DeptComponent implements OnInit {
             else {
                 this.snackBar.open(p.msg || '修改失败', 'ok');
             }
-        }).catch(
-            e => {
-                this.snackBar.open(e, 'ok');
-            });
+        });
     }
     // 删除
     delete(): void {
@@ -113,10 +105,7 @@ export class DeptComponent implements OnInit {
             else {
                 this.snackBar.open(p.msg || '删除失败', 'ok');
             }
-        }).catch(
-            e => {
-                this.snackBar.open(e, 'ok');
-            });
+        });
     }
 
     // 对话框相关
